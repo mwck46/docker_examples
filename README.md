@@ -3,8 +3,8 @@
 
 ### docker ps
 lists all running docker containers (processes)  
-`-a` list all running and stopped containers
-`-q` quiet, only display containers' id
+`-a` list all running and stopped containers  
+`-q` quiet, only display containers' id  
 ```
 docker ps -a
 ```
@@ -21,7 +21,8 @@ Remove a docker container
 ```
 docker rm <container_id>
 ```
-Remove all docker containers  
+Remove all docker containers   
+`-v` also remove volumes  
 ```
 docker rm -v $(docker ps -aq)
 ```
