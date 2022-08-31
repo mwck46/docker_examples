@@ -3,7 +3,7 @@
 
 ### docker ps
 lists all running docker containers (processes)  
-`-a` all
+`-a` list all running and stopped containers
 ```
 docker ps -a
 ```
