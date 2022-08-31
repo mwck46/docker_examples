@@ -32,6 +32,16 @@ Remove a docker image
 docker rmi <image_id>
 ```
 
+### docker inspect
+Get information about a docker container
+`-f` format output
+Check the mount point of a container
+```
+docker inspect -f {{.Mounts}} <container_id>
+```
+
+
+
 ### docker build
 Build a docker image
 `-t <image_name>` specify the tag of the image. If it is omited, the latest tag will be used  
