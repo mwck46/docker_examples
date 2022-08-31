@@ -4,6 +4,7 @@
 ### docker ps
 lists all running docker containers (processes)  
 `-a` list all running and stopped containers
+`-q` quiet, only display containers' id
 ```
 docker ps -a
 ```
