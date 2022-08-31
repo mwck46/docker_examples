@@ -19,8 +19,12 @@ docker images -a
 Remove a docker container  
 ```
 docker rm <container_id>
+```
+Remove all docker containers  
+```
 docker rm -v $(docker ps -aq)
 ```
+
 
 ### docker rmi
 Remove a docker image  
@@ -35,5 +39,8 @@ docker rmi <image_id>
 Stop a docker container 
 ```
 docker stop <container_id>
+```
+Stop all docker containers  
+```
 docker stop $(docker ps -q)
 ```
