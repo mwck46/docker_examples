@@ -32,7 +32,17 @@ Remove a docker image
 docker rmi <image_id>
 ```
 
+### docker build
+Build a docker image
+`-t <image_name>` specify the tag of the image. If it is omited, the latest tag will be used  
+```
+docker build -t mydocker1 .
+```
+
+
+
 ### docker run
+
 
 
 ### docker stop
