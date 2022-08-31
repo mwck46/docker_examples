@@ -27,3 +27,13 @@ Remove a docker image
 ```
 docker rmi <image_id>
 ```
+
+### docker run
+
+
+### docker stop
+Stop a docker container 
+```
+docker stop <container_id>
+docker stop $(docker ps -q)
+```
