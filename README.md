@@ -54,8 +54,23 @@ docker build -t mydocker1 .
 
 
 ### docker run
+`--name <container_name>` a name given to the container for identification  
 
+`--link <container_name>:<image_name>` docker automatically expose ports, so this container can reach the linked container  
 
+`-p <host_port>:<image_port>` port forwarding, more than one `-p` can be set  
+`-P` forward the exposed port specified in Dockerfile, use `docker ps` to check the port mapping by  
+
+`-v <host_dir>:<container_dir>` mount a volume from docker host inside a container  
+`-v <docker_volume_name>:<container_dir>`  
+`-v <container_dir>` if host path is omitted, a data container will be created.  
+
+`-e "<env_var>=<val>"` set environment variable  
+
+`-d <image_name>` run in daemon mode. It is usually the last option.  
+```
+docker run -P -d <image_name>
+```
 
 ### docker stop
 Stop a docker container 
