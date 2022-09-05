@@ -41,14 +41,16 @@ docker rmi <image_id>
 ```
 
 ### docker inspect
-Get information about a docker container
-`-f` format output
-Check the mount point of a container
+Get information about a docker container  
+`-f`,`--format` format output with Go template  
+Check the mount point of a container  
 ```
 docker inspect -f {{.Mounts}} <container_id>
 ```
-
-
+Check the IP address of the container
+```
+docker inspect -f '{{ .NetworkingSettings.IPAddress }}' <container_name>
+```
 
 ### docker build
 Build a docker image
