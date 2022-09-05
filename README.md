@@ -62,6 +62,9 @@ docker build -t mydocker1 .
 
 
 ### docker run
+
+`export DOCKER_BUILDKIT=1` https://docs.docker.com/develop/develop-images/build_enhancements/
+
 `--name <container_name>` a name given to the container for identification  
 
 `--link <container_name>:<image_name>` docker automatically expose ports, so this container can reach the linked container  
