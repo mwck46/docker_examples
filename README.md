@@ -16,6 +16,12 @@ lists all docker images
 docker images -a
 ```
 
+### docker tag
+To tag an image with specific version name / number 
+```
+docker tag source_img[:tag] target_img[:tag]
+```
+
 ### docker rm
 Remove a docker container  
 ```
