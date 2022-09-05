@@ -2,10 +2,10 @@ FROM ubuntu:20.04
 
 RUN apt-get update && apt-get install -y openssh-server
 
-# create user dev (pw: dev11)
+# create user devp (pw: devp11)
 # For some reason, it can't ssh to root directly
-RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test 
-RUN echo 'dev:dev11' | chpasswd
+RUN useradd -rm -d /home/devp -s /bin/bash -g root -G sudo -u 1000 devp
+RUN echo 'devp:devp11' | chpasswd
 
 RUN mkdir /var/run/sshd
 RUN service ssh start
