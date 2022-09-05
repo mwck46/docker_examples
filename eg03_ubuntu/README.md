@@ -9,4 +9,4 @@ docker build -t ubuntu20_ssh .
 docker run --name dev_env1 -p 10022:22 -d ubuntu20_ssh
 ```
 
-3. ssh dvlp@10.x.x.x -p 10022
+3. ssh devp@10.x.x.x -p 10022
