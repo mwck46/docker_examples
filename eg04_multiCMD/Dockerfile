@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 #
 # Install necessory packages
-RUN apt-get install -y sudo cron \ 
+RUN apt-get update && apt-get install -y sudo cron \ 
   openssh-server openssh-client
 
 #
@@ -19,8 +19,9 @@ RUN useradd -rm -d /home/devp -s /bin/bash -G sudo -u 1000 -U devp &&\
   echo 'devp:devp11' | chpasswd && \
   adduser devp sudo
 
-# copy source code
-COPY --chown=devp ./src /home/devp
+#
+# Copy source code
+COPY --chown=devp src /home/devp/src
 
 #
 # Set ssh
@@ -31,7 +32,7 @@ EXPOSE 22
 #
 # cron job
 #
-COPY --chown=devp src/crontab/devp-cron /etc/cron.d/devp-cron
+COPY --chown=devp src/devp-cron /etc/cron.d/devp-cron
 ## Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/devp-cron
 ## switch to another user, apply cron job
@@ -42,4 +43,5 @@ USER root
 # 
 # entry point
 #
-CMD ["./main.sh"]
+WORKDIR /home/devp
+CMD ["./src/main.sh"]
