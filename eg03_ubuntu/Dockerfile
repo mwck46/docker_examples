@@ -4,8 +4,8 @@ RUN apt-get update && apt-get install -y openssh-server
 
 # create user devp (pw: devp11)
 # For some reason, it can't ssh to root directly
-RUN useradd -rm -d /home/devp -s /bin/bash -g root -G sudo -u 1000 devp
-RUN echo 'devp:devp11' | chpasswd
+RUN useradd -rm -d /home/devp -s /bin/bash -g root -G sudo -u 1000 devp && \
+ echo 'devp:devp11' | chpasswd
 
 RUN mkdir /var/run/sshd
 RUN service ssh start
