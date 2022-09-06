@@ -90,5 +90,5 @@ docker stop <container_id>
 ```
 Stop all docker containers  
 ```
-docker stop $(docker ps -q)
+docker stop $(docker ps -aq)
 ```
