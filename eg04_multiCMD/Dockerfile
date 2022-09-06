@@ -22,6 +22,7 @@ RUN useradd -rm -d /home/devp -s /bin/bash -G sudo -u 1000 -U devp &&\
 #
 # Copy source code
 COPY --chown=devp src /home/devp/src
+RUN chmod +x /home/devp/src/main.sh
 
 #
 # Set ssh
