@@ -53,7 +53,9 @@ docker inspect -f '{{ .NetworkingSettings.IPAddress }}' <container_name>
 ```
 
 ### docker build
-Build a docker image
+Build a docker image.  
+To show more debug info, set environment variable `export DOCKER_BUILDKIT=1`. 
+See [doc](https://docs.docker.com/develop/develop-images/build_enhancements/)  
 `-t <image_name>` specify the tag of the image. If it is omited, the latest tag will be used  
 ```
 docker build -t mydocker1 .
@@ -62,8 +64,6 @@ docker build -t mydocker1 .
 
 
 ### docker run
-
-`export DOCKER_BUILDKIT=1` https://docs.docker.com/develop/develop-images/build_enhancements/
 
 `--name <container_name>` a name given to the container for identification  
 
