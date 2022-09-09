@@ -60,7 +60,10 @@ See [doc](https://docs.docker.com/develop/develop-images/build_enhancements/)
 ```
 docker build -t mydocker1 .
 ```
-
+`--build-arg <key>=<value>`, pass build time argument to dockerfile `ARG`
+```
+docker build --build-arg HOST_UID=$(id -u) -t img_name .
+```
 
 
 ### docker run
